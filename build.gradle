@@ -1,0 +1,23 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {	//  mavenCentral() 이라는 공개된 사이트에서 라이브러리 자동다운받음
+	mavenCentral()
+}
+
+dependencies {		//  spring.io에서 설정한 라이브러리 + 기본적으로 jUint5 테스트 라이브러리 들어간다
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
