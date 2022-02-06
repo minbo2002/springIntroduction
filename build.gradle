@@ -16,6 +16,7 @@ dependencies {		//  spring.io에서 설정한 라이브러리 + 기본적으로 
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-devtools'
 }
 
 tasks.named('test') {
